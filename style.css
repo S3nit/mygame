@@ -1,0 +1,71 @@
+body{
+    background: rgb(255, 255, 255);
+}
+
+#canvas {
+    position: absolute;
+    border: 3px solid rgb(0, 0, 0);
+    width: 1000px;
+    height: 600px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    
+}
+
+.center{
+    position:relative;
+    margin-left: 0;
+    margin-top: 100px;
+    text-anchor: middle;
+    text-align: center;
+    z-index: 1;
+}
+
+.reveal-text{
+    color: white;
+    text-shadow: 0 0 4px white;
+}
+
+.fade-out{
+    color: white;
+    text-shadow: 0 0 4px white;
+    animation: out 3s forwards;
+    animation-delay: 0;
+}
+
+.reveal-text span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  animation: reveal 0.2s forwards;
+}
+
+.reveal-text .space {
+  filter: none;
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes out {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+}
